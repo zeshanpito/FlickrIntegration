@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewViewController">
             <connections>
                 <outlet property="loginButton" destination="kUD-ia-Mrh" id="b4i-hr-JR6"/>
+                <outlet property="mediaTableView" destination="a2b-iw-zaC" id="Epu-Xp-wa3"/>
                 <outlet property="progressbar" destination="9G8-sd-qmt" id="CG5-dn-Ph6"/>
+                <outlet property="selectButton" destination="h3K-nH-KbA" id="o3F-OS-maC"/>
                 <outlet property="uploadButton" destination="WHb-38-0gk" id="TcG-yz-KVB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kUD-ia-Mrh">
-                    <rect key="frame" x="250" y="93" width="100" height="30"/>
+                    <rect key="frame" x="275" y="93" width="100" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Login">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,7 +31,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WHb-38-0gk">
-                    <rect key="frame" x="48" y="93" width="100" height="30"/>
+                    <rect key="frame" x="18" y="93" width="100" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Upload image">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,8 +40,27 @@
                         <action selector="uploadImagePressed:" destination="-1" eventType="touchUpInside" id="TqN-VR-CNI"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h3K-nH-KbA">
+                    <rect key="frame" x="161" y="93" width="106" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Select images">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="multiSelectPressed:" destination="-1" eventType="touchUpInside" id="bcN-YU-2Mc"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="a2b-iw-zaC">
+                    <rect key="frame" x="0.0" y="139" width="375" height="535"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="byZ-Gd-WE4"/>
+                        <outlet property="delegate" destination="-1" id="tWC-ss-Av7"/>
+                    </connections>
+                </tableView>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="9G8-sd-qmt">
-                    <rect key="frame" x="23" y="202" width="327" height="2"/>
+                    <rect key="frame" x="18" y="66" width="327" height="2"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </progressView>
             </subviews>

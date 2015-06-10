@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RootViewViewController : UIViewController
+#import "ELCImagePicker/ELCImagePickerHeader.h"
+@interface RootViewViewController : UIViewController <ELCImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 - (IBAction)loginButtonPressed:(id)sender;
